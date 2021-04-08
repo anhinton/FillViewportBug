@@ -47,8 +47,8 @@ public class FillViewportBug extends ApplicationAdapter {
 		fillViewport.apply();
 		batch.setProjectionMatrix(fillViewport.getCamera().combined);
 		batch.begin();
-		batch.draw(bannerLeftTexture, 0, 0);
-		batch.draw(bannerRightTexture, fillViewport.getWorldWidth() - bannerRightTexture.getWidth(), 0);
+		batch.draw(bannerLeftTexture, 0, 0, fillViewport.getWorldWidth(), fillViewport.getWorldHeight());
+//		batch.draw(bannerRightTexture, fillViewport.getWorldWidth() - bannerRightTexture.getWidth(), 0);
 		batch.end();
 	}
 
